@@ -1,8 +1,6 @@
-﻿using MediatR;
+﻿namespace CompanyName.MyMeetings.BuildingBlocks.Domain;
 
-namespace CompanyName.MyMeetings.BuildingBlocks.Domain;
-
-public interface IDomainEvent : INotification
+public interface IDomainEvent
 {
     Guid Id { get; }
 
