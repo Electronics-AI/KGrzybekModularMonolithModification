@@ -25,6 +25,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{D8167740-3ED
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UserAccess.Domain", "src\Modules\UserAccess\src\UserAccess.Domain\UserAccess.Domain.csproj", "{DA46000F-0DFE-4616-8445-D3D1ED6DA7B3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UserAccess.IntegrationEvents", "src\Modules\UserAccess\src\UserAccess.IntegrationEvents\UserAccess.IntegrationEvents.csproj", "{3BBB30F2-78BF-410B-BA7B-2C5B6868C141}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -54,6 +56,10 @@ Global
 		{DA46000F-0DFE-4616-8445-D3D1ED6DA7B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DA46000F-0DFE-4616-8445-D3D1ED6DA7B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DA46000F-0DFE-4616-8445-D3D1ED6DA7B3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3BBB30F2-78BF-410B-BA7B-2C5B6868C141}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3BBB30F2-78BF-410B-BA7B-2C5B6868C141}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3BBB30F2-78BF-410B-BA7B-2C5B6868C141}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3BBB30F2-78BF-410B-BA7B-2C5B6868C141}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{9BB54412-90CE-4BD5-8929-1962069C31A0} = {598EE99B-1856-4373-8120-0F9DBA3AB44E}
@@ -66,5 +72,6 @@ Global
 		{4F8AABF4-9B90-4AF9-AC81-BE840E1F953F} = {3357F17E-0F23-4D70-AB92-CBC45FB59D5E}
 		{D8167740-3ED0-45FD-A867-A1D51841B346} = {4F8AABF4-9B90-4AF9-AC81-BE840E1F953F}
 		{DA46000F-0DFE-4616-8445-D3D1ED6DA7B3} = {D8167740-3ED0-45FD-A867-A1D51841B346}
+		{3BBB30F2-78BF-410B-BA7B-2C5B6868C141} = {D8167740-3ED0-45FD-A867-A1D51841B346}
 	EndGlobalSection
 EndGlobal
