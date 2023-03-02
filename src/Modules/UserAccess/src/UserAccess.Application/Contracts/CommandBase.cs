@@ -1,6 +1,8 @@
-﻿namespace CompanyName.MyMeetings.Modules.UserAccess.Application.Contracts;
+﻿using MediatR;
 
-public abstract class CommandBase : ICommand
+namespace CompanyName.MyMeetings.Modules.UserAccess.Application.Contracts;
+
+public abstract class CommandBase : ICommand, IRequest<MediatR.Unit>
 {
     public Guid Id { get; }
 
@@ -15,7 +17,7 @@ public abstract class CommandBase : ICommand
     }
 }
 
-public abstract class CommandBase<TResult> : ICommand<TResult>
+public abstract class CommandBase<TResult> : ICommand<TResult>, IRequest<TResult>
 {
     public Guid Id { get; }
 

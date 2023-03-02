@@ -5,7 +5,7 @@ namespace CompanyName.MyMeetings.Modules.UserAccess.Application.Configuration.Co
 
 public interface ICommandHandler<in TCommand> :
     IRequestHandler<TCommand>
-    where TCommand : ICommand
+    where TCommand : ICommand 
 {
 }
 
