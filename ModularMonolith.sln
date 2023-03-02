@@ -49,6 +49,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{D023686E-2F5
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Payments.IntegrationEvents", "src\Modules\Payments\src\Payments.IntegrationEvents\Payments.IntegrationEvents.csproj", "{92D6216E-066D-4996-B597-1F63FC5A7BC3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Meetings.Domain", "src\Modules\Meetings\src\Meetings.Domain\Meetings.Domain.csproj", "{B54D05E6-BA2D-4035-A803-204542414403}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -102,6 +104,10 @@ Global
 		{92D6216E-066D-4996-B597-1F63FC5A7BC3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{92D6216E-066D-4996-B597-1F63FC5A7BC3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{92D6216E-066D-4996-B597-1F63FC5A7BC3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B54D05E6-BA2D-4035-A803-204542414403}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B54D05E6-BA2D-4035-A803-204542414403}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B54D05E6-BA2D-4035-A803-204542414403}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B54D05E6-BA2D-4035-A803-204542414403}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{9BB54412-90CE-4BD5-8929-1962069C31A0} = {598EE99B-1856-4373-8120-0F9DBA3AB44E}
@@ -126,5 +132,6 @@ Global
 		{3E4511E8-3652-4DA0-8E58-5FC832AFEF32} = {3357F17E-0F23-4D70-AB92-CBC45FB59D5E}
 		{D023686E-2F51-4635-ACE3-2C197B82887B} = {3E4511E8-3652-4DA0-8E58-5FC832AFEF32}
 		{92D6216E-066D-4996-B597-1F63FC5A7BC3} = {D023686E-2F51-4635-ACE3-2C197B82887B}
+		{B54D05E6-BA2D-4035-A803-204542414403} = {3D368679-FF2D-480D-807D-85D837876102}
 	EndGlobalSection
 EndGlobal
