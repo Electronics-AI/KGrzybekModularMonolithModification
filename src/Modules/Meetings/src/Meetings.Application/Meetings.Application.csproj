@@ -5,6 +5,9 @@
     <ProjectReference Include="..\..\..\..\BuildingBlocks\src\BuildingBlocks.EventBus\BuildingBlocks.EventBus.csproj" />
     <ProjectReference Include="..\Meetings.Domain\Meetings.Domain.csproj" />
     <ProjectReference Include="..\Meetings.IntegrationEvents\Meetings.IntegrationEvents.csproj" />
+    <ProjectReference Include="..\..\..\Payments\src\Payments.IntegrationEvents\Payments.IntegrationEvents.csproj" />
+    <ProjectReference Include="..\..\..\Administration\src\Administration.IntegrationEvents\Administration.IntegrationEvents.csproj" />
+    <ProjectReference Include="..\..\..\UserAccess\src\UserAccess.IntegrationEvents\UserAccess.IntegrationEvents.csproj" />
   </ItemGroup>
 
   <ItemGroup>
@@ -25,7 +28,7 @@
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>enable</Nullable>
+    <Nullable>disable</Nullable>
   </PropertyGroup>
 
 </Project>
