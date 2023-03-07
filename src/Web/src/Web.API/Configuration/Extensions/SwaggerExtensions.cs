@@ -21,11 +21,6 @@ namespace CompanyName.MyMeetings.API.Configuration.Extensions
                     Description = "MyMeetings API for modular monolith .NET application."
                 });
                 options.CustomSchemaIds(t => t.ToString());
-                
-                var baseDirectory = AppDomain.CurrentDomain.BaseDirectory;
-                var commentsFileName = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
-                var commentsFile = Path.Combine(baseDirectory, commentsFileName);
-                options.IncludeXmlComments(commentsFile);
 
                 options.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
                 {

@@ -1,5 +1,7 @@
 ﻿using System;
+using System.IdentityModel.Tokens.Jwt;
 using System.Linq;
+using System.Security.Claims;
 using CompanyName.MyMeetings.BuildingBlocks.Application;
 using Microsoft.AspNetCore.Http;
 
@@ -17,19 +19,12 @@ namespace CompanyName.MyMeetings.API.Configuration.ExecutionContext
         public Guid UserId
         {
             get
-            {
-                if (_httpContextAccessor
-                    .HttpContext?
-                    .User?
-                    .Claims?
-                    .SingleOrDefault(x => x.Type == "sub")?
-                    .Value != null)
-                {
-                    return Guid.Parse(_httpContextAccessor.HttpContext.User.Claims.Single(
-                        x => x.Type == "sub").Value);
-                }
+            {   
+                var accessToken = _httpContextAccessor.HttpContext.Request.Headers["Authorization"].ToString().Split(" ")[1];
+                var jwt = new JwtSecurityTokenHandler().ReadJwtToken(accessToken);
+                string userId = jwt.Claims.First(c => c.Type == "sub").Value;
 
-                throw new ApplicationException("User context is not available");
+                return Guid.Parse(userId);
             }
         }
 

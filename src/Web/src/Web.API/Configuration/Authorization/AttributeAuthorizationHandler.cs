@@ -11,8 +11,13 @@ namespace CompanyName.MyMeetings.API.Configuration.Authorization
         where TAttribute : Attribute
     {
         protected override Task HandleRequirementAsync(AuthorizationHandlerContext context, TRequirement requirement)
-        {
-            var attribute = (context.Resource as RouteEndpoint)?.Metadata.GetMetadata<TAttribute>();
+        {   
+            TAttribute attribute = null;
+
+            if (context.Resource is HttpContext httpContext) {
+                var endpoint = httpContext?.GetEndpoint();
+                attribute = endpoint?.Metadata.GetMetadata<TAttribute>();
+            }
 
             return HandleRequirementAsync(context, requirement, attribute);
         }

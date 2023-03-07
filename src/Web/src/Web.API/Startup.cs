@@ -56,7 +56,7 @@ namespace CompanyName.MyMeetings.API
 
             ConfigureIdentityServer(services);
 
-            services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+            services.AddHttpContextAccessor();
             services.AddSingleton<IExecutionContextAccessor, ExecutionContextAccessor>();
 
             services.AddProblemDetails(x =>
