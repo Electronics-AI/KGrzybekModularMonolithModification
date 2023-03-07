@@ -1,11 +1,9 @@
-FROM mcr.microsoft.com/mssql/server:2017-latest-ubuntu
+FROM mcr.microsoft.com/mssql/server:2017-latest
 
-COPY ./CompanyName.MyMeetings.Database/Scripts/CreateDatabase_Linux.sql /scripts/
+EXPOSE 1433
 
-ENV ACCEPT_EULA=Y
-ENV SA_PASSWORD=Test@12345
-ENV MSSQL_PID=Express
-ENV MSSQL_TCP_PORT=1433
+COPY ./Scripts/ /scripts/
 
 ADD entrypoint.sh /
+
 ENTRYPOINT ["/bin/bash", "/entrypoint.sh"]

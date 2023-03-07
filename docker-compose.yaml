@@ -1,0 +1,31 @@
+version: "3.8"
+services:
+  mymeetings_app_sql_server_database:
+    container_name: mymeetings_app_sql_server_database
+    hostname: mymeetings_app_sql_server_database
+    build:
+      context: ./src/Database/SqlServer/
+    environment:
+      ACCEPT_EULA: "Y"
+      SA_PASSWORD: 1paSS-word2
+    volumes:
+      - './drives/sqlserver:/var/opt/mssql'
+    networks:
+      - mymeetings_app_local_network
+
+  mymeetings_app_backend:
+    container_name: mymeetings_app_backend
+    hostname: mymeetings_app_backend
+    build:
+      context: ./src/
+    ports:
+      - "5080:80"
+    environment:
+      - Meetings_MeetingsConnectionString=Server=mymeetings_app_sql_server_database,1433;Database=MyMeetings;User Id=SA;Password=1paSS-word2;Trusted_Connection=false;
+    networks:
+      - mymeetings_app_local_network
+    depends_on:
+      - mymeetings_app_sql_server_database
+
+networks:
+  mymeetings_app_local_network:

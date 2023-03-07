@@ -20,7 +20,13 @@ namespace CompanyName.MyMeetings.API.Configuration.ExecutionContext
         {
             get
             {   
-                var accessToken = _httpContextAccessor.HttpContext.Request.Headers["Authorization"].ToString().Split(" ")[1];
+                var authorizationHeader = _httpContextAccessor.HttpContext.Request.Headers["Authorization"];
+
+                if (String.IsNullOrEmpty(authorizationHeader)) {
+                    throw new ApplicationException("Execution context is not available");
+                } 
+
+                var accessToken = authorizationHeader.ToString().Split(" ")[1];
                 var jwt = new JwtSecurityTokenHandler().ReadJwtToken(accessToken);
                 string userId = jwt.Claims.First(c => c.Type == "sub").Value;
 
