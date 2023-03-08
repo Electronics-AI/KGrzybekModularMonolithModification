@@ -1,11 +1,8 @@
-﻿using System;
+﻿namespace CompanyName.MyMeetings.Modules.Meetings.Application.MeetingCommentingConfiguration.GetMeetingCommentingConfiguration;
 
-namespace CompanyName.MyMeetings.Modules.Meetings.Application.MeetingCommentingConfiguration.GetMeetingCommentingConfiguration
+public class MeetingCommentingConfigurationDto
 {
-    public class MeetingCommentingConfigurationDto
-    {
-        public Guid MeetingId { get; }
+    public Guid MeetingId { get; }
 
-        public bool IsCommentingEnabled { get; }
-    }
+    public bool IsCommentingEnabled { get; }
 }

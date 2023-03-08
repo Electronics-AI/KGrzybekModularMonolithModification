@@ -1,15 +1,13 @@
-﻿using System;
-using CompanyName.MyMeetings.Modules.Meetings.Application.Contracts;
+﻿using CompanyName.MyMeetings.Modules.Meetings.Application.Contracts;
 
-namespace CompanyName.MyMeetings.Modules.Meetings.Application.MeetingComments.AddMeetingCommentLike
+namespace CompanyName.MyMeetings.Modules.Meetings.Application.MeetingComments.AddMeetingCommentLike;
+
+public class AddMeetingCommentLikeCommand : CommandBase
 {
-    public class AddMeetingCommentLikeCommand : CommandBase
-    {
-        public Guid MeetingCommentId { get; }
+    public Guid MeetingCommentId { get; }
 
-        public AddMeetingCommentLikeCommand(Guid meetingCommentId)
-        {
-            MeetingCommentId = meetingCommentId;
-        }
+    public AddMeetingCommentLikeCommand(Guid meetingCommentId)
+    {
+        MeetingCommentId = meetingCommentId;
     }
 }

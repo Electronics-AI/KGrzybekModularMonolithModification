@@ -1,15 +1,13 @@
-﻿using System;
-using CompanyName.MyMeetings.Modules.Administration.Application.Configuration.Queries;
+﻿using CompanyName.MyMeetings.Modules.Administration.Application.Configuration.Queries;
 
-namespace CompanyName.MyMeetings.Modules.Administration.Application.MeetingGroupProposals.GetMeetingGroupProposal
+namespace CompanyName.MyMeetings.Modules.Administration.Application.MeetingGroupProposals.GetMeetingGroupProposal;
+
+public class GetMeetingGroupProposalQuery : QueryBase<MeetingGroupProposalDto>
 {
-    public class GetMeetingGroupProposalQuery : QueryBase<MeetingGroupProposalDto>
+    public GetMeetingGroupProposalQuery(Guid meetingGroupProposalId)
     {
-        public GetMeetingGroupProposalQuery(Guid meetingGroupProposalId)
-        {
-            MeetingGroupProposalId = meetingGroupProposalId;
-        }
-
-        public Guid MeetingGroupProposalId { get; }
+        MeetingGroupProposalId = meetingGroupProposalId;
     }
+
+    public Guid MeetingGroupProposalId { get; }
 }

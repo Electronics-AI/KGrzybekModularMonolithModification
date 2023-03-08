@@ -1,14 +1,11 @@
-﻿using System.Threading;
-using System.Threading.Tasks;
-using MediatR;
+﻿using MediatR;
 
-namespace CompanyName.MyMeetings.Modules.Meetings.Application.Members.CreateMember
+namespace CompanyName.MyMeetings.Modules.Meetings.Application.Members.CreateMember;
+
+public class MemberCratedNotificationHandler : INotificationHandler<MemberCreatedNotification>
 {
-    public class MemberCratedNotificationHandler : INotificationHandler<MemberCreatedNotification>
+    public Task Handle(MemberCreatedNotification notification, CancellationToken cancellationToken)
     {
-        public Task Handle(MemberCreatedNotification notification, CancellationToken cancellationToken)
-        {
-            return Task.CompletedTask;
-        }
+        return Task.CompletedTask;
     }
 }

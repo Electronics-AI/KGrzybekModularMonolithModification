@@ -1,11 +1,8 @@
-﻿using System.Threading.Tasks;
+﻿namespace CompanyName.MyMeetings.Modules.Payments.Infrastructure.AggregateStore;
 
-namespace CompanyName.MyMeetings.Modules.Payments.Infrastructure.AggregateStore
+public interface ICheckpointStore
 {
-    public interface ICheckpointStore
-    {
-        long? GetCheckpoint(SubscriptionCode subscriptionCode);
+    long? GetCheckpoint(SubscriptionCode subscriptionCode);
 
-        Task StoreCheckpoint(SubscriptionCode subscriptionCode, long checkpoint);
-    }
+    Task StoreCheckpoint(SubscriptionCode subscriptionCode, long checkpoint);
 }

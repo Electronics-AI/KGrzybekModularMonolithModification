@@ -1,15 +1,13 @@
-﻿using System;
-using CompanyName.MyMeetings.Modules.Payments.Application.Contracts;
+﻿using CompanyName.MyMeetings.Modules.Payments.Application.Contracts;
 
-namespace CompanyName.MyMeetings.Modules.Payments.Application.Subscriptions.GetSubscriptionDetails
+namespace CompanyName.MyMeetings.Modules.Payments.Application.Subscriptions.GetSubscriptionDetails;
+
+public class GetSubscriptionDetailsQuery : QueryBase<SubscriptionDetailsDto>
 {
-    public class GetSubscriptionDetailsQuery : QueryBase<SubscriptionDetailsDto>
+    public GetSubscriptionDetailsQuery(Guid subscriptionId)
     {
-        public GetSubscriptionDetailsQuery(Guid subscriptionId)
-        {
-            SubscriptionId = subscriptionId;
-        }
-
-        public Guid SubscriptionId { get; }
+        SubscriptionId = subscriptionId;
     }
+
+    public Guid SubscriptionId { get; }
 }

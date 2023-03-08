@@ -1,16 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using CompanyName.MyMeetings.Modules.Payments.Application.Contracts;
+﻿using CompanyName.MyMeetings.Modules.Payments.Application.Contracts;
 
-namespace CompanyName.MyMeetings.Modules.Payments.Application.Subscriptions.GetSubscriptionPayments
+namespace CompanyName.MyMeetings.Modules.Payments.Application.Subscriptions.GetSubscriptionPayments;
+
+public class GetSubscriptionPaymentsQuery : QueryBase<List<SubscriptionPaymentDto>>
 {
-    public class GetSubscriptionPaymentsQuery : QueryBase<List<SubscriptionPaymentDto>>
+    public GetSubscriptionPaymentsQuery(Guid payerId)
     {
-        public GetSubscriptionPaymentsQuery(Guid payerId)
-        {
-            PayerId = payerId;
-        }
-
-        public Guid PayerId { get; }
+        PayerId = payerId;
     }
+
+    public Guid PayerId { get; }
 }

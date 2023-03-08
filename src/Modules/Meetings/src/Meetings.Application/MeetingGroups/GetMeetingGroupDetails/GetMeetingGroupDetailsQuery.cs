@@ -1,15 +1,13 @@
-﻿using System;
-using CompanyName.MyMeetings.Modules.Meetings.Application.Configuration.Queries;
+﻿using CompanyName.MyMeetings.Modules.Meetings.Application.Configuration.Queries;
 
-namespace CompanyName.MyMeetings.Modules.Meetings.Application.MeetingGroups.GetMeetingGroupDetails
+namespace CompanyName.MyMeetings.Modules.Meetings.Application.MeetingGroups.GetMeetingGroupDetails;
+
+public class GetMeetingGroupDetailsQuery : QueryBase<MeetingGroupDetailsDto>
 {
-    public class GetMeetingGroupDetailsQuery : QueryBase<MeetingGroupDetailsDto>
+    public GetMeetingGroupDetailsQuery(Guid meetingGroupId)
     {
-        public GetMeetingGroupDetailsQuery(Guid meetingGroupId)
-        {
-            MeetingGroupId = meetingGroupId;
-        }
-
-        public Guid MeetingGroupId { get; }
+        MeetingGroupId = meetingGroupId;
     }
+
+    public Guid MeetingGroupId { get; }
 }

@@ -1,13 +1,11 @@
-﻿using System;
-using CompanyName.MyMeetings.Modules.Payments.Domain.SeedWork;
+﻿using CompanyName.MyMeetings.Modules.Payments.Domain.SeedWork;
 
-namespace CompanyName.MyMeetings.Modules.Payments.Domain.Subscriptions
+namespace CompanyName.MyMeetings.Modules.Payments.Domain.Subscriptions;
+
+public class SubscriptionId : AggregateId<Subscription>
 {
-    public class SubscriptionId : AggregateId<Subscription>
+    public SubscriptionId(Guid value)
+        : base(value)
     {
-        public SubscriptionId(Guid value)
-            : base(value)
-        {
-        }
     }
 }

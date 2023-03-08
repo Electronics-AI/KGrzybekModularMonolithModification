@@ -1,11 +1,8 @@
-﻿using System.Threading.Tasks;
+﻿namespace CompanyName.MyMeetings.Modules.Administration.Domain.Members;
 
-namespace CompanyName.MyMeetings.Modules.Administration.Domain.Members
+public interface IMemberRepository
 {
-    public interface IMemberRepository
-    {
-        Task AddAsync(Member member);
+    Task AddAsync(Member member);
 
-        Task<Member> GetByIdAsync(MemberId memberId);
-    }
+    Task<Member> GetByIdAsync(MemberId memberId);
 }

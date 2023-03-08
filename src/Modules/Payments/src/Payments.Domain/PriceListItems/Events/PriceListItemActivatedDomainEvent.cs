@@ -1,15 +1,13 @@
-﻿using System;
-using CompanyName.MyMeetings.BuildingBlocks.Domain;
+﻿using CompanyName.MyMeetings.BuildingBlocks.Domain;
 
-namespace CompanyName.MyMeetings.Modules.Payments.Domain.PriceListItems.Events
+namespace CompanyName.MyMeetings.Modules.Payments.Domain.PriceListItems.Events;
+
+public class PriceListItemActivatedDomainEvent : DomainEventBase
 {
-    public class PriceListItemActivatedDomainEvent : DomainEventBase
+    public PriceListItemActivatedDomainEvent(Guid priceListItemId)
     {
-        public PriceListItemActivatedDomainEvent(Guid priceListItemId)
-        {
-            PriceListItemId = priceListItemId;
-        }
-
-        public Guid PriceListItemId { get; }
+        PriceListItemId = priceListItemId;
     }
+
+    public Guid PriceListItemId { get; }
 }

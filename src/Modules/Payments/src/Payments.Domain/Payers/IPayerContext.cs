@@ -1,9 +1,6 @@
-﻿using System.Security.Cryptography.X509Certificates;
+﻿namespace CompanyName.MyMeetings.Modules.Payments.Domain.Payers;
 
-namespace CompanyName.MyMeetings.Modules.Payments.Domain.Payers
+public interface IPayerContext
 {
-    public interface IPayerContext
-    {
-        PayerId PayerId { get; }
-    }
+    PayerId PayerId { get; }
 }

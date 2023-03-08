@@ -1,15 +1,13 @@
-﻿using System;
-using CompanyName.MyMeetings.BuildingBlocks.Domain;
+﻿using CompanyName.MyMeetings.BuildingBlocks.Domain;
 
-namespace CompanyName.MyMeetings.Modules.Meetings.Domain.Meetings.Events
+namespace CompanyName.MyMeetings.Modules.Meetings.Domain.Meetings.Events;
+
+public class MeetingEditedDomainEvent : DomainEventBase
 {
-    public class MeetingEditedDomainEvent : DomainEventBase
+    public MeetingEditedDomainEvent(Guid meetingId)
     {
-        public MeetingEditedDomainEvent(Guid meetingId)
-        {
-            MeetingId = meetingId;
-        }
-
-        public Guid MeetingId { get; }
+        MeetingId = meetingId;
     }
+
+    public Guid MeetingId { get; }
 }

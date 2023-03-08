@@ -1,12 +1,10 @@
-﻿using System.Threading.Tasks;
-using CompanyName.MyMeetings.Modules.Meetings.Domain.Meetings;
+﻿using CompanyName.MyMeetings.Modules.Meetings.Domain.Meetings;
 
-namespace CompanyName.MyMeetings.Modules.Meetings.Domain.MeetingCommentingConfigurations
+namespace CompanyName.MyMeetings.Modules.Meetings.Domain.MeetingCommentingConfigurations;
+
+public interface IMeetingCommentingConfigurationRepository
 {
-    public interface IMeetingCommentingConfigurationRepository
-    {
-        Task AddAsync(MeetingCommentingConfiguration meetingCommentingConfiguration);
+    Task AddAsync(MeetingCommentingConfiguration meetingCommentingConfiguration);
 
-        Task<MeetingCommentingConfiguration> GetByMeetingIdAsync(MeetingId meetingId);
-    }
+    Task<MeetingCommentingConfiguration> GetByMeetingIdAsync(MeetingId meetingId);
 }

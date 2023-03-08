@@ -1,13 +1,11 @@
-﻿using System;
-using CompanyName.MyMeetings.BuildingBlocks.Domain;
+﻿using CompanyName.MyMeetings.BuildingBlocks.Domain;
 
-namespace CompanyName.MyMeetings.Modules.Meetings.Domain.MeetingMemberCommentLikes
+namespace CompanyName.MyMeetings.Modules.Meetings.Domain.MeetingMemberCommentLikes;
+
+public class MeetingMemberCommentLikeId : TypedIdValueBase
 {
-    public class MeetingMemberCommentLikeId : TypedIdValueBase
+    public MeetingMemberCommentLikeId(Guid value)
+        : base(value)
     {
-        public MeetingMemberCommentLikeId(Guid value)
-            : base(value)
-        {
-        }
     }
 }

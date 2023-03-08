@@ -1,15 +1,13 @@
-﻿using System;
-using CompanyName.MyMeetings.Modules.Payments.Application.Contracts;
+﻿using CompanyName.MyMeetings.Modules.Payments.Application.Contracts;
 
-namespace CompanyName.MyMeetings.Modules.Payments.Application.PriceListItems.ActivatePriceListItem
+namespace CompanyName.MyMeetings.Modules.Payments.Application.PriceListItems.ActivatePriceListItem;
+
+public class ActivatePriceListItemCommand : CommandBase
 {
-    public class ActivatePriceListItemCommand : CommandBase
+    public ActivatePriceListItemCommand(Guid priceListItemId)
     {
-        public ActivatePriceListItemCommand(Guid priceListItemId)
-        {
-            PriceListItemId = priceListItemId;
-        }
-
-        public Guid PriceListItemId { get; }
+        PriceListItemId = priceListItemId;
     }
+
+    public Guid PriceListItemId { get; }
 }

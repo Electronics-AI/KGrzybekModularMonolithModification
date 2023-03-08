@@ -1,15 +1,13 @@
-﻿using System;
-using CompanyName.MyMeetings.Modules.Administration.Application.Configuration.Queries;
+﻿using CompanyName.MyMeetings.Modules.Administration.Application.Configuration.Queries;
 
-namespace CompanyName.MyMeetings.Modules.Administration.Application.Members.GetMember
+namespace CompanyName.MyMeetings.Modules.Administration.Application.Members.GetMember;
+
+public class GetMemberQuery : QueryBase<MemberDto>
 {
-    public class GetMemberQuery : QueryBase<MemberDto>
+    public GetMemberQuery(Guid memberId)
     {
-        public GetMemberQuery(Guid memberId)
-        {
-            MemberId = memberId;
-        }
-
-        public Guid MemberId { get; }
+        MemberId = memberId;
     }
+
+    public Guid MemberId { get; }
 }

@@ -1,16 +1,13 @@
-﻿using System;
-using System.Runtime.InteropServices.ComTypes;
-using MediatR;
+﻿using MediatR;
 
-namespace CompanyName.MyMeetings.Modules.Meetings.Application.Contracts
+namespace CompanyName.MyMeetings.Modules.Meetings.Application.Contracts;
+
+public interface ICommand<out TResult> : IRequest<TResult>
 {
-    public interface ICommand<out TResult> : IRequest<TResult>
-    {
-        Guid Id { get; }
-    }
+    Guid Id { get; }
+}
 
-    public interface ICommand : IRequest<MediatR.Unit>
-    {
-        Guid Id { get; }
-    }
+public interface ICommand : IRequest<MediatR.Unit>
+{
+    Guid Id { get; }
 }

@@ -1,15 +1,13 @@
-﻿using System;
-using CompanyName.MyMeetings.Modules.Meetings.Application.Contracts;
+﻿using CompanyName.MyMeetings.Modules.Meetings.Application.Contracts;
 
-namespace CompanyName.MyMeetings.Modules.Meetings.Application.MeetingGroups.LeaveMeetingGroup
+namespace CompanyName.MyMeetings.Modules.Meetings.Application.MeetingGroups.LeaveMeetingGroup;
+
+public class LeaveMeetingGroupCommand : CommandBase
 {
-    public class LeaveMeetingGroupCommand : CommandBase
+    public LeaveMeetingGroupCommand(Guid meetingGroupId)
     {
-        public LeaveMeetingGroupCommand(Guid meetingGroupId)
-        {
-            MeetingGroupId = meetingGroupId;
-        }
-
-        internal Guid MeetingGroupId { get; }
+        MeetingGroupId = meetingGroupId;
     }
+
+    internal Guid MeetingGroupId { get; }
 }

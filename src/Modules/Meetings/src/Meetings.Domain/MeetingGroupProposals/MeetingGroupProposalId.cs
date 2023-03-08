@@ -1,13 +1,11 @@
-﻿using System;
-using CompanyName.MyMeetings.BuildingBlocks.Domain;
+﻿using CompanyName.MyMeetings.BuildingBlocks.Domain;
 
-namespace CompanyName.MyMeetings.Modules.Meetings.Domain.MeetingGroupProposals
+namespace CompanyName.MyMeetings.Modules.Meetings.Domain.MeetingGroupProposals;
+
+public class MeetingGroupProposalId : TypedIdValueBase
 {
-    public class MeetingGroupProposalId : TypedIdValueBase
+    public MeetingGroupProposalId(Guid value)
+        : base(value)
     {
-        public MeetingGroupProposalId(Guid value)
-            : base(value)
-        {
-        }
     }
 }

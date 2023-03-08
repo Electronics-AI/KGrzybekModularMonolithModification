@@ -1,9 +1,6 @@
-﻿using System;
+﻿namespace CompanyName.MyMeetings.Modules.Administration.Domain.Users;
 
-namespace CompanyName.MyMeetings.Modules.Administration.Domain.Users
+public interface IUserContext
 {
-    public interface IUserContext
-    {
-        UserId UserId { get; }
-    }
+    UserId UserId { get; }
 }

@@ -1,15 +1,13 @@
-﻿using System;
-using CompanyName.MyMeetings.Modules.Meetings.Application.Contracts;
+﻿using CompanyName.MyMeetings.Modules.Meetings.Application.Contracts;
 
-namespace CompanyName.MyMeetings.Modules.Meetings.Application.Meetings.SignUpMemberToWaitlist
+namespace CompanyName.MyMeetings.Modules.Meetings.Application.Meetings.SignUpMemberToWaitlist;
+
+public class SignUpMemberToWaitlistCommand : CommandBase
 {
-    public class SignUpMemberToWaitlistCommand : CommandBase
-    {
-        public Guid MeetingId { get; }
+    public Guid MeetingId { get; }
 
-        public SignUpMemberToWaitlistCommand(Guid meetingId)
-        {
-            MeetingId = meetingId;
-        }
+    public SignUpMemberToWaitlistCommand(Guid meetingId)
+    {
+        MeetingId = meetingId;
     }
 }

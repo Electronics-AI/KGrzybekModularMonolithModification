@@ -1,15 +1,13 @@
-﻿using System;
-using CompanyName.MyMeetings.Modules.Payments.Application.Contracts;
+﻿using CompanyName.MyMeetings.Modules.Payments.Application.Contracts;
 
-namespace CompanyName.MyMeetings.Modules.Payments.Application.MeetingFees.CreateMeetingFeePayment
+namespace CompanyName.MyMeetings.Modules.Payments.Application.MeetingFees.CreateMeetingFeePayment;
+
+public class CreateMeetingFeePaymentCommand : CommandBase<Guid>
 {
-    public class CreateMeetingFeePaymentCommand : CommandBase<Guid>
+    public CreateMeetingFeePaymentCommand(Guid meetingFeeId)
     {
-        public CreateMeetingFeePaymentCommand(Guid meetingFeeId)
-        {
-            MeetingFeeId = meetingFeeId;
-        }
-
-        public Guid MeetingFeeId { get; }
+        MeetingFeeId = meetingFeeId;
     }
+
+    public Guid MeetingFeeId { get; }
 }

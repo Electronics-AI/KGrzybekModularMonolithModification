@@ -1,15 +1,13 @@
-﻿using System;
-using CompanyName.MyMeetings.Modules.Administration.Application.Contracts;
+﻿using CompanyName.MyMeetings.Modules.Administration.Application.Contracts;
 
-namespace CompanyName.MyMeetings.Modules.Administration.Application.MeetingGroupProposals.AcceptMeetingGroupProposal
+namespace CompanyName.MyMeetings.Modules.Administration.Application.MeetingGroupProposals.AcceptMeetingGroupProposal;
+
+public class AcceptMeetingGroupProposalCommand : CommandBase
 {
-    public class AcceptMeetingGroupProposalCommand : CommandBase
+    public AcceptMeetingGroupProposalCommand(Guid meetingGroupProposalId)
     {
-        public AcceptMeetingGroupProposalCommand(Guid meetingGroupProposalId)
-        {
-            MeetingGroupProposalId = meetingGroupProposalId;
-        }
-
-        internal Guid MeetingGroupProposalId { get; }
+        MeetingGroupProposalId = meetingGroupProposalId;
     }
+
+    internal Guid MeetingGroupProposalId { get; }
 }

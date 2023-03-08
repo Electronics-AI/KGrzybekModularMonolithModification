@@ -1,12 +1,8 @@
-﻿using System;
-using System.Threading.Tasks;
+﻿namespace CompanyName.MyMeetings.Modules.Meetings.Domain.MeetingGroupProposals;
 
-namespace CompanyName.MyMeetings.Modules.Meetings.Domain.MeetingGroupProposals
+public interface IMeetingGroupProposalRepository
 {
-    public interface IMeetingGroupProposalRepository
-    {
-        Task AddAsync(MeetingGroupProposal meetingGroupProposal);
+    Task AddAsync(MeetingGroupProposal meetingGroupProposal);
 
-        Task<MeetingGroupProposal> GetByIdAsync(MeetingGroupProposalId meetingGroupProposalId);
-    }
+    Task<MeetingGroupProposal> GetByIdAsync(MeetingGroupProposalId meetingGroupProposalId);
 }
