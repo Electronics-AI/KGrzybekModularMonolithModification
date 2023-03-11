@@ -1,0 +1,14 @@
+version: "3.8"
+services:
+  db:
+    container_name: meetings_sql_server
+    hostname: meetings
+    environment:
+      ACCEPT_EULA: "Y"
+      SA_PASSWORD: 1paSS-word2
+    image: mcr.microsoft.com/mssql/server:2017-latest
+    ports:
+      - "1401:1433"
+    volumes:
+        - './drives/sqlserver:/var/opt/mssql'
+    
